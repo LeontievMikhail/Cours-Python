@@ -7,3 +7,5 @@ class Class:
 obj = Class()
 
 obj.luke = 'the chosen too'
+
+print('')
