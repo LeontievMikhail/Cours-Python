@@ -1,14 +1,12 @@
 import os
+foo = "bar"
 
-foo="bar"
-
-if os.fork() ==0:
+if os.fork() == 0:
     #child process
-    foo = "baz"
-    print("child: ", foo)
-
+    foo = "bax"
+    print('child: ', foo)
 else:
-    #parental process
+    #Parental process
     print("parent: ", foo)
     os.wait()
 
