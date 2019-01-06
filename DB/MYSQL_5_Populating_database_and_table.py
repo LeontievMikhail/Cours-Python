@@ -22,7 +22,8 @@ sqlFormula="INSERT INTO students (name, age) VALUES (%s, %s)"
 students = [("Bob", 12),
             ("Anna", 22),
             ("Alex", 33),
-            ("Emma", 55)
+            ("Emma", 55),
+            ("Mikhail", 7777777777)
             ]
 mycursor.executemany(sqlFormula, students)
 
