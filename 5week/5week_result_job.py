@@ -58,15 +58,3 @@ class Client:
             self.connection.close()
         except socket.error as err:
             raise ClError("error close connection", err)
-def _main():
-    client = Client("127.0.0.1", 8888, timeout=5)
-    client.put("test", 0.5, timestamp=1)
-    client.put("test", 2.0, timestamp=2)
-    client.put("test", 0.5, timestamp=3)
-    client.put("load", 3, timestamp=4)
-    client.put("load", 4, timestamp=5)
-    print(client.get("*"))
-
-    client.close()
-if __name__ == "__main__":
-    _main()
