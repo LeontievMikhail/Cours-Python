@@ -1,3 +1,4 @@
+import
 import socket
 
 def run_server(host, port):
@@ -31,7 +32,7 @@ def run_server(host, port):
 						answer += "\n"
 						conn.send(answer.encode("utf8"))
 					else:
-						conn.send("error\nwrong command\n\n".encode("utf8"))
+						conn.send("error \n wrong command \n \n".encode("utf8"))
 
 if __name__=="__main__":
     run_server("127.0.0.1", 8888)
