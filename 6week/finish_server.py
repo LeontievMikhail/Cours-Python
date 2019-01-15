@@ -1,5 +1,5 @@
-import
 import socket
+import os
 
 def run_server(host, port):
 	with socket.socket() as sock:
@@ -9,6 +9,7 @@ def run_server(host, port):
 			conn, attr = sock.accept()
 			with conn:
 				while True:
+					# item=b""
 					item = conn.recv(1024)
 					if not item:
 						break
@@ -32,7 +33,8 @@ def run_server(host, port):
 						answer += "\n"
 						conn.send(answer.encode("utf8"))
 					else:
-						conn.send("error \n wrong command \n \n".encode("utf8"))
-
-if __name__=="__main__":
-    run_server("127.0.0.1", 8888)
+						conn.send("error\nwrong command\n\n".encode("utf8"))
+run_server("127.0.0.1", 8888)
+#
+# if __name__ == '__main__':
+# 	run_server("127.0.0.1", 8888)
