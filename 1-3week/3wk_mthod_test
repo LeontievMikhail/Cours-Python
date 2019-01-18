@@ -1,0 +1,11 @@
+class Planet:
+    count=0
+    def __init__(self, name, population=None):
+        self.name=name
+        self.population=population or []
+        Planet.count += 1
+
+earth=Planet('Earth')
+mars = Planet('Mars')
+
+print(Planet.count)
