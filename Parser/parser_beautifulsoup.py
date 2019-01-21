@@ -18,10 +18,10 @@ def get_page_data(html):
     soup=BeautifulSoup(html, 'lxml')
 
     ads=soup.find('div', class_='catalog-main catalog_table').find_all('div', class_='item_table-header')
-
+    print('len', len(ads))
     for ad in ads:
         try:
-            title = ad.find('div', class_='title item-description-title').find('h3').text.strip()
+            title = ad.find('span', itemprop='name')
         except:
             title=''
         print('title', title)
