@@ -21,7 +21,7 @@ def get_page_data(html):
     print('len', len(ads))
     for ad in ads:
         try:
-            title = ad.find('span', itemprop='name')
+            title = ad.find('span', itemprop='name').text
         except:
             title=''
         print('title', title)
