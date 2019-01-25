@@ -7,6 +7,9 @@ from selenium import webdriver
 from time import sleep
 from PIL import Image
 from pytesseract import image_to_string
+import pytesseract
+
+pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files (x86)/Tesseract-OCR/tesseract'
 
 class Bot:
     def __init__(self):
