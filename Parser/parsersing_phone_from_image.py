@@ -33,14 +33,14 @@ class Bot:
     def navigate(self):
         self.driver.get('https://www.avito.ru/orenburg/kvartiry/2-k_kvartira_65_m_516_et._1202106358')
 
-        button = self.driver.find_element_by_xpath('//button[@class="button item-phone-button js-item-phone-button button-origin button-origin-blue button-origin_full-width button-origin_large-extra item-phone-button_hide-phone item-phone-button_card js-item-phone-button_card"]')
+        button = self.driver.find_element_by_xpath('//a[@class="button item-phone-button js-item-phone-button button-origin button-origin-blue button-origin_full-width button-origin_large-extra item-phone-button_hide-phone item-phone-button_card js-item-phone-button_card"]')
         button.click()
 
         sleep(3)
 
         self.take_screenshot()
 
-        image=self.driver.find_element_by_xpath('//div@class="item-phone-big-number js-item-phone-big-number"]//*')
+        image=self.driver.find_element_by_xpath('//div[@class="item-phone-big-number js-item-phone-big-number"]//*')
         location=image.location
         size=image.size
         self.crop(location, size)
