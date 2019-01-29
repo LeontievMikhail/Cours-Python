@@ -18,20 +18,20 @@ class Bot:
         self.navigate()
 
     def take_screenshot(self):
-        self.driver.save_screenshot('avito_screenshot.png')
+        self.driver.save_screenshot('avito/avito_screenshot.png')
 
     def tel_recon(self):
-        image=Image.open('tel.gif')
+        image=Image.open('avito/tel.gif')
         print(image_to_string(image))
 
     def crop(self, location, size):
-        image=Image.open('avito_screenshot.png')
+        image=Image.open('avito/avito_screenshot.png')
         x=location['x']
         y=location['y']
         width= size['width']
         height= size['height']
 
-        image.crop((x,y, x+width, y+height)).save('tel.gif')
+        image.crop((x,y, x+width, y+height)).save('avito/tel.gif')
         self.tel_recon()
 
     def navigate(self):
