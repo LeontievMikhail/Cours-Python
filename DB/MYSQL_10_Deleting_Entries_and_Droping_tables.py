@@ -15,4 +15,6 @@ mycursor=mydb.cursor()
 
 sql = "DROP TABLE IF EXISTS students"
 mycursor.execute(sql)
+
+
 mydb.commit()
