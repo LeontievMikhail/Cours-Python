@@ -7,6 +7,8 @@ mydb=mysql.connector.connect(
     database="testdb"
 )
 
+
+
 mycursor=mydb.cursor()
 # sql = "DELETE FROM students WHERE name='Alex'"
 # sql = "DELETE FROM students WHERE age=55"
